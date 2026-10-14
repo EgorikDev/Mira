@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100815">
+<title>Прости меня, Мира ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+:root{--pink:#ff79d7;--rose:#ffb4e8;--purple:#bd8cff;--bg:#09060d;--muted:#c9b8d3}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:#fff;font-family:Manrope,system-ui,sans-serif;background:radial-gradient(ellipse at 50% 0%,#35143b 0%,#130b1b 42%,#08060c 100%);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.14;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");z-index:4}
+.glow{position:fixed;width:380px;height:380px;border-radius:50%;filter:blur(100px);opacity:.18;pointer-events:none;animation:drift 12s ease-in-out infinite alternate}
+.glow.one{background:#f22aa8;top:8%;left:-180px}.glow.two{background:#823bff;right:-190px;bottom:5%;animation-delay:-5s}
+@keyframes drift{to{transform:translate(70px,-35px) scale(1.15)}}
+[hidden]{display:none!important}
+.welcome{min-height:calc(100vh - 66px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:45px 12px 60px;transition:opacity .28s,transform .28s}
+.welcome-leaving{opacity:0;transform:translateY(-12px)}
+.welcome-orbit{width:94px;height:94px;display:grid;place-items:center;border:1px solid #ff79d777;border-radius:50%;font-size:45px;color:var(--pink);box-shadow:0 0 55px #ff79d733,inset 0 0 35px #ff79d711;animation:heartbeat 2.2s infinite}
+.welcome-kicker,.reconcile-kicker{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);margin:28px 0 0}
+.welcome h1{font-size:clamp(48px,8vw,82px);margin:20px 0}
+.welcome h1 em,.reconcile h2 em{color:#ff9cde;font-weight:500}
+.welcome-copy{color:#d5c5df;line-height:1.9;margin:0 0 27px}
+.welcome-foot{margin-top:22px;color:#9e88ae;font-size:12px;letter-spacing:.12em}
+.reconcile{text-align:center;max-width:720px;margin:0 auto 75px;padding:45px 25px;border:1px solid #ff8cdd30;border-radius:28px;background:radial-gradient(ellipse at 50% 0%,#ff70d51b,transparent 70%),#ffffff04}
+.reconcile-heart{font-size:43px;color:var(--pink);text-shadow:0 0 24px #ff79d7;animation:heartbeat 2s infinite}
+.reconcile h2{font:500 clamp(31px,5vw,48px)/1.25 "Playfair Display",Georgia,serif;margin:18px 0}
+.reconcile>p:not(.reconcile-kicker):not(.reconcile-small){max-width:520px;margin:0 auto 24px;color:#d5c7dc;line-height:1.9}
+.reconcile-small{font-size:12px;color:#a994b5;margin-top:18px}
+.peace-message{margin:32px auto 0;max-width:500px;padding:25px;border-radius:20px;background:#ff79d70e;border:1px solid #ff79d74a;animation:appear .5s ease}
+.peace-big-heart{font-size:50px;color:#ff8bdc;filter:drop-shadow(0 0 18px #ff79d7);animation:heartbeat 1.8s infinite}
+.peace-message h3{color:#ffd1ef;font-size:19px}.peace-message p{color:#d8c9df;line-height:1.8}.peace-message span{color:#ffafe4;font-family:"Playfair Display",Georgia,serif;font-style:italic}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+header{height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,5vw,70px);border-bottom:1px solid #ffffff13;background:#09060c80;backdrop-filter:blur(16px);position:relative;z-index:5}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.02em}.brand-mark{display:grid;place-items:center;width:30px;height:30px;border:1px solid #ff79d777;border-radius:10px;color:var(--pink);box-shadow:0 0 22px #ff79d722}
+.header-note{color:#bba7c9;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+main{width:min(100% - 36px,1050px);margin:0 auto;position:relative;z-index:1}
+.hero{text-align:center;padding:76px 0 38px}
+.eyebrow{font-size:11px;letter-spacing:.38em;text-transform:uppercase;color:var(--rose);display:flex;align-items:center;justify-content:center;gap:15px}
+.eyebrow:before,.eyebrow:after{content:"";height:1px;width:54px;background:linear-gradient(90deg,transparent,var(--pink))}
+.eyebrow:after{transform:rotate(180deg)}
+h1{font-family:"Playfair Display",Georgia,serif;font-weight:500;font-style:italic;font-size:clamp(52px,9vw,100px);line-height:1.05;letter-spacing:-.045em;margin:23px 0 12px;text-shadow:0 0 38px #ff65c95c}
+.heart-divider{color:var(--pink);font-size:26px;filter:drop-shadow(0 0 12px #ff79d7);margin:0 0 22px;animation:heartbeat 2.2s infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}8%{transform:scale(1.14)}16%{transform:scale(1)}24%{transform:scale(1.09)}32%{transform:scale(1)}}
+.intro{max-width:700px;margin:auto;color:#e6dce9;font-size:clamp(15px,2vw,18px);line-height:1.9}
+.intro strong{color:#fff;font-weight:700}.pinkline{display:block;margin-top:16px;color:var(--rose);font-weight:800;font-size:18px}
+.note{margin:30px auto 0;display:flex;justify-content:center;gap:9px;align-items:center;color:#a994bb;font-size:13px}.note span{color:var(--pink)}
+.promises{display:grid;grid-template-columns:repeat(4,1fr);margin:42px 0 36px;border-top:1px solid #ffffff15;border-bottom:1px solid #ffffff15;padding:27px 0}
+.promise{padding:10px 18px;text-align:center;position:relative}.promise+.promise:before{content:"";position:absolute;left:0;top:15%;height:70%;width:1px;background:#ffffff16}
+.icon{font-size:29px;color:var(--pink);text-shadow:0 0 20px #ff79d766;margin-bottom:12px}.promise h3{font-size:14px;margin:0 0 9px}.promise p{font-size:12px;line-height:1.8;color:#bdaec9;margin:0}
+.cta-wrap{text-align:center;padding:4px 0 66px}
+button{font:inherit;cursor:pointer;border:0}
+.love-button{position:relative;overflow:hidden;padding:17px 30px;border-radius:999px;color:#240b24;font-weight:800;background:linear-gradient(110deg,#ffb3e7,#ff72d2 55%,#d9a0ff);box-shadow:0 0 34px #ff5fc84a,0 8px 30px #0005;transition:transform .25s,box-shadow .25s;min-width:min(320px,100%)}
+.love-button:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 0 48px #ff5fc880,0 12px 35px #0006}.love-button:active{transform:scale(.98)}
+.love-button .arrow{display:inline-block;margin-left:12px;transition:transform .25s}.love-button:hover .arrow{transform:translateX(5px)}
+.under-cta{margin-top:17px;color:#a68eb9;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:15px}
+.letter{max-width:760px;margin:0 auto 72px;padding:clamp(25px,5vw,48px);border:1px solid #ff9ce52b;border-radius:25px;background:linear-gradient(135deg,#ffffff08,#ff83d40a);box-shadow:inset 0 1px #ffffff0b,0 22px 80px #0003;position:relative}
+.letter:before{content:"“";position:absolute;top:-30px;left:25px;font-family:Georgia,serif;font-size:90px;color:#ff8bdc44}
+.letter h2{text-align:center;font:italic 500 31px "Playfair Display",Georgia,serif;margin:0 0 24px;color:#ffd2f0}
+.letter p{color:#d5c7dc;line-height:1.95;font-size:15px;margin:0 0 15px}.signature{text-align:right!important;color:#ffb1e7!important;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:21px!important;margin-top:24px!important}
+footer{border-top:1px solid #ffffff12;padding:25px 22px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#8f7b9e;font-size:12px;position:relative;z-index:2}
+footer b{color:#d5b6e7;font-weight:600}
+.floating-heart{position:fixed;bottom:-40px;color:#ff79d7;pointer-events:none;z-index:8;animation:floatUp linear forwards;text-shadow:0 0 12px #ff79d7}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,25px);opacity:0;pointer-events:none;background:#1b1024;border:1px solid #ff79d755;color:#ffe3f5;padding:15px 22px;border-radius:18px;box-shadow:0 10px 45px #0009;z-index:10;text-align:center;width:max-content;max-width:calc(100% - 30px);transition:.35s}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:700px){.welcome{min-height:calc(100vh - 58px)}.reconcile{padding:35px 18px;margin-bottom:45px}header{height:58px}.header-note{display:none}.hero{padding-top:58px}.promises{grid-template-columns:repeat(2,1fr);padding:10px 0}.promise{padding:22px 12px}.promise:nth-child(3):before{display:none}.promise:nth-child(n+3){border-top:1px solid #ffffff12}.promise h3{font-size:13px}.promise p{font-size:11px}.letter{margin-bottom:50px}.letter h2{font-size:27px}footer{justify-content:center;text-align:center}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="glow one"></div><div class="glow two"></div>
+<header><div class="brand"><span class="brand-mark">♥</span><span>для Миры</span></div><div class="header-note">от EgorikDev · с любовью</div></header>
+<main>
+<section class="welcome" id="welcome">
+  <div class="welcome-orbit">♡</div>
+  <p class="welcome-kicker">одно маленькое письмо для тебя</p>
+  <h1>Мирочка,<br><em>это для тебя</em></h1>
+  <p class="welcome-copy">Я хочу сказать тебе кое-что важное.<br>Пожалуйста, прочитай, когда тебе будет удобно. ♡</p>
+  <button class="love-button" id="openLetter">Открыть письмо <span class="arrow">→</span></button>
+  <div class="welcome-foot">от Егора · с любовью</div>
+</section>
+<div id="letterContent" hidden>
+<section class="hero">
+<div class="eyebrow">моя Мира</div>
+<h1>Прости меня…</h1>
+<div class="heart-divider">♡</div>
+<p class="intro">Мира, я знаю, что всё получилось не так, как хотелось. <strong>Мне правда жаль.</strong> Я не хочу, чтобы между нами были обиды и недосказанность. Ты очень важна для меня, и я не хочу терять то хорошее, что есть между нами.<br><strong>Я тебя люблю.</strong> И мне хочется не спорить с тобой, а слышать тебя, понимать и быть рядом.</p>
+<span class="pinkline">Пожалуйста, прости меня, если я сделал тебе больно.</span>
+<div class="note"><span>♥</span> не просто слова — я хочу это доказать <span>♥</span></div>
+</section>
+<section class="promises" aria-label="Мои обещания">
+<div class="promise"><div class="icon">♡</div><h3>Я люблю тебя</h3><p>Ты очень дорога мне.<br>Я ценю тебя и нас.</p></div>
+<div class="promise"><div class="icon">∞</div><h3>Ты важна</h3><p>Мне важны твои чувства,<br>мысли и переживания.</p></div>
+<div class="promise"><div class="icon">✧</div><h3>Я постараюсь</h3><p>Буду внимательнее<br>и буду учиться на ошибках.</p></div>
+<div class="promise"><div class="icon">☻</div><h3>Давай поговорим?</h3><p>Спокойно, честно<br>и без взаимных упрёков.</p></div>
+</section>
+<div class="cta-wrap">
+<button class="love-button" id="loveBtn">♥ &nbsp; Я тебя люблю, Мира <span class="arrow">→</span></button>
+<div class="under-cta">ты — моё особенное счастье ♡</div>
+</div>
+<section class="letter">
+<h2>От всего сердца</h2>
+<p>Я не хочу давить на тебя или заставлять сразу меня прощать. Я просто хочу, чтобы ты знала: ты для меня не случайный человек. Мне дороги наши моменты, наши разговоры и даже маленькие вещи, которые, возможно, кажутся незначительными.</p>
+<p>Если я был неправ — я хочу это понять, а не просто сделать вид, что ничего не произошло. Я хочу уметь признавать свои ошибки и показывать поступками, что ты можешь мне доверять.</p>
+<p>Я очень тебя люблю, Мира. Прости меня, пожалуйста. Когда будешь готова, давай поговорим. Я тебя выслушаю. ❤️</p>
+<p class="signature">Твой Егор · EgorikDev</p>
+</section>
+</main>
+<footer><span>♡ <b>EgorikDev</b> · для Миры</span><span>сделано с любовью, не идеальными словами, а искренним сердцем</span></footer>
+<div class="toast" id="toast">Мира, я тебя очень люблю. ♡</div>
+<script>
+const btn=document.getElementById('loveBtn'),toast=document.getElementById('toast');
+const welcome=document.getElementById('welcome'), letterContent=document.getElementById('letterContent');
+document.getElementById('openLetter').addEventListener('click',()=>{
+  welcome.classList.add('welcome-leaving');
+  setTimeout(()=>{welcome.hidden=true;letterContent.hidden=false;window.scrollTo({top:0,behavior:'smooth'});},280);
+});
+function heart(){const el=document.createElement('span');el.className='floating-heart';el.textContent=['♥','♡','❤','✦'][Math.floor(Math.random()*4)];el.style.left=Math.random()*100+'vw';el.style.fontSize=(14+Math.random()*24)+'px';el.style.animationDuration=(4+Math.random()*4)+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),8500)}
+btn.addEventListener('click',()=>{for(let i=0;i<28;i++)setTimeout(heart,i*65);toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3600);btn.innerHTML='♡ &nbsp; Всегда с любовью, Мира <span class="arrow">♥</span>'});
+document.getElementById('makePeace').addEventListener('click',()=>{
+  const msg=document.getElementById('peaceMessage');
+  msg.hidden=false;
+  for(let i=0;i<55;i++)setTimeout(heart,i*45);
+  document.getElementById('makePeace').textContent='♡ Спасибо, Мира ♡';
+  setTimeout(()=>msg.scrollIntoView({behavior:'smooth',block:'center'}),150);
+});
+</script>
+</body>
+</html>
